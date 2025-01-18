@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz Platform</h1>
+        <div id="create-quiz">
+            <h2>Create a Quiz</h2>
+            <form id="quiz-form">
+                <div class="question">
+                    <label for="question">Question:</label>
+                    <input type="text" id="question" name="question" required>
+                </div>
+                <div class="answers">
+                    <label>Answers:</label>
+                    <input type="text" class="answer" name="answer1" required>
+                    <input type="text" class="answer" name="answer2" required>
+                    <input type="text" class="answer" name="answer3" required>
+                    <input type="text" class="answer" name="answer4" required>
+                </div>
+                <div class="correct-answer">
+                    <label for="correct">Correct Answer (1-4):</label>
+                    <input type="number" id="correct" name="correct" min="1" max="4" required>
+                </div>
+                <button type="submit">Add Question</button>
+            </form>
+        </div>
+
+        <div id="quiz-list">
+            <h2>Available Quizzes</h2>
+            <ul id="quizzes">
+                <!-- List of quizzes will be appended here -->
+            </ul>
+        </div>
+
+        <div id="take-quiz" style="display:none;">
+            <h2>Take Quiz</h2>
+            <form id="quiz-take-form">
+                <div id="questions-container">
+                    <!-- Quiz questions will be appended here -->
+                </div>
+                <button type="submit">Submit Quiz</button>
+            </form>
+        </div>
+
+        <div id="result" style="display:none;">
+            <h2>Quiz Result</h2>
+            <p id="score"></p>
+            <button id="retake-quiz">Retake Quiz</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
